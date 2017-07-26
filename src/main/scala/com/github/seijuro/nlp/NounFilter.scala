@@ -1,18 +1,17 @@
 package com.github.seijuro.nlp
 
-import com.twitter.penguin.korean.tokenizer.KoreanTokenizer.KoreanToken
-import com.twitter.penguin.korean.util.KoreanPos
+import org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken
+import org.openkoreantext.processor.util.KoreanPos
 
 object NounFilter {
   def filter(token: KoreanToken): Boolean = {
     val pos = token.pos
 
-    if (pos == KoreanPos.Noun ||
-      pos == KoreanPos.Alpha) {
+    if (pos == KoreanPos.Noun || pos == KoreanPos.Alpha) {
       return true
     }
 
-    //  filter
+    // (additional) filter
 
     return false;
   }

@@ -152,21 +152,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.twitter.penguin</groupId>
-            <artifactId>korean-text</artifactId>
-            <version>4.4.4</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.twitter</groupId>
-                    <artifactId>twitter-text</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>com.twitter</groupId>
-            <artifactId>twitter-text</artifactId>
-            <version>1.11.1</version>
+            <groupId>org.openkoreantext</groupId>
+            <artifactId>open-korean-text</artifactId>
+            <version>2.1.0</version>
         </dependency>
 
         <!-- Joda Time -->

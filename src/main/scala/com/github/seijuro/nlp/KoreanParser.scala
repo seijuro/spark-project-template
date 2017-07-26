@@ -1,12 +1,12 @@
 package com.github.seijuro.nlp
 
-import com.twitter.penguin.korean.TwitterKoreanProcessor
+import org.openkoreantext.processor.OpenKoreanTextProcessor
 
 object KoreanParser {
   def extractNoun(text: String) = {
-    val nomalized: CharSequence = TwitterKoreanProcessor.normalize(text)
+    val nomalized: CharSequence = OpenKoreanTextProcessor.normalize(text)
 
-    TwitterKoreanProcessor.tokenize(nomalized)
+    OpenKoreanTextProcessor.tokenize(nomalized)
       .filter(NounFilter.filter)
       .map(a => a.text -> 1)
   }
